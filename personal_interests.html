@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+	<head>
+		<title>Personal Interests</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel = "stylesheet" href = "style.css">
+	</head>
+	<div class="topnav">
+		<a href = "index.html">About Me</a>
+		<a href = "class_projects.html">Class Projects</a>
+		<a href = "personal_projects.html">Personal Projects</a>
+		<a href = "personal_interests.html" class = "active">Personal Interests</a>
+		<a href = "contact_me.html">Contact Me</a>
+	</div>
+	<body> <div id = "page-container"> <div id = "content-wrap">
+		<h3>This page is a work in progress.</h3>
+		<p class = "p"> These are some of my interests that I have developed over the years. As stated in my about me page, I enjoy bodybuilding, powerlifting, armwrestling, swimming, cycling, running, cooking, trying out exorbitantly spicy or unusual food, and video games. I used to do a lot of art and I enjoyed small and large scale sculptures that have a pattern.</p>
+		<h1>Bodybuilding</h1>
+		<p class = "p"> I will be eager to post progress photos and records for lifts in the future.</p>
+		<ul class = "p">
+			<li>General Body Sculpting</li>
+			<li>Powerlifting</li>
+			<li>Sports</li>
+				<ul>
+					<li>Swimming</li>
+					<li>Cycling</li>
+				</ul>
+		</ul>
+		<h1>Cooking</h1>
+		<p class = "p"> Here are some pictures I remembered to take before eating some food. I am an extreme rookie with the camera so excuse the odd lighting and angles.</p>
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+  				<div class="numbertext">1 / 6</div>
+  				<img src="Garlic Bread.jpg" style="width:100%">
+  			<div class="text">Garlic Bread</div>
+		</div>
+		<div class="mySlides fade">
+  			<div class="numbertext">2 / 6</div>
+  			<img src="Garlic Naan.jpg" style="width:100%">
+  			<div class="text">Garlic Naan</div>
+		</div>
+		<div class="mySlides fade">
+  			<div class="numbertext">3 / 6</div>
+  			<img src="Modak.jpg" style="width:100%">
+  			<div class="text">Modak (Indian Sweet Dumpling)</div>
+		</div>
+		<div class="mySlides fade">
+  			<div class="numbertext">4 / 6</div>
+  			<img src="Pasta.png" style="width:100%">
+  			<div class="text">Pasta Salad with Sides</div>
+		</div>
+		<div class="mySlides fade">
+  			<div class="numbertext">5 / 6</div>
+  			<img src="Pasta_2.png" style="width:100%">
+  			<div class="text">Regular Pasta Salad</div>
+		</div>
+		<div class="mySlides fade">
+  			<div class="numbertext">6 / 6</div>
+  			<img src="Paneer.jpg" style="width:100%">
+  			<div class="text">Paneer (Indian Cottage Cheese)</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+			<span class="dot" onclick="currentSlide(6)"></span> 
+		</div>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+  				for (i = 0; i < dots.length; i++) {
+      					dots[i].className = dots[i].className.replace(" active", "");
+  				}
+  				slides[slideIndex-1].style.display = "block";  
+  				dots[slideIndex-1].className += " active";
+			}
+		</script>
+	</div>
+
+	<div class = "footer-personal-interests">
+		<p>Made by Param Bhandare for L I S 351: Introduction to Digital Information Fall 2020</p>
+		<p>There is no intention of monetization and the website, names, and implementation comes to fruition through the help of course material, the MDN, and the W3Schools.
+	</div> </div> </body>
+</html>
